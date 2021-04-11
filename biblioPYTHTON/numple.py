@@ -13,12 +13,10 @@ c = (a[0:, 1])
 d = b.mean()
 r = c.mean()
 mean_a = [d, r]
-print(mean_a)
 
 #задание2
 
 a_centered = a - mean_a
-print(a_centered)
 
 #задание3
 
@@ -31,3 +29,5 @@ print(a_centered_sp)
 N = a.shape[0]
 pol = a_centered_sp / (N - 1)
 print(pol)
+
+#Остальное не успел...
