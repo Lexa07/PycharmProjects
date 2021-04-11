@@ -1,3 +1,4 @@
+#задание1
 import pandas as pd
 
 
@@ -16,14 +17,16 @@ b = {
 
 book = pd.DataFrame(b)
 
+#задание2
 
 author_price = pd.merge(authors, book, on='author_id', how='inner')
 
+#задание3
 
 top5 = author_price.nlargest(5, "price")
 
-
-author_stat = author_price.groupby("author_name")
+#задание4
+gr = author_price.groupby("author_name")
 ma = gr.agg({"price": "max"})
 mi = gr.agg({"price": "min"})
 me = gr.agg({"price": "mean"})
@@ -32,3 +35,4 @@ e = pd.merge(mi, ma, on="author_name", how="outer")
 author_stat = pd.merge(e, me, on="author_name", how="outer")
 author_stat
 
+#Остальное не успел...
